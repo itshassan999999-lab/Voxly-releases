@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Voxly</title>
+<meta name="description" content="How Voxly handles your voice, text, account and device data.">
+<meta name="theme-color" content="#070815">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta property="og:title" content="Voxly Privacy Policy">
+<meta property="og:description" content="How Voxly handles your voice, text, account and device data.">
+<meta property="og:image" content="https://itshassan999999-lab.github.io/Voxly-releases/assets/og-image.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<header class="nav scrolled">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="34" height="34">Voxly</a>
+    <nav class="nav-links"><a href="terms.html">Terms</a><a class="btn btn-ghost btn-sm" href="index.html">Back to site</a></nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 5 November 2026</p>
+
+    <div class="summary">
+      <b>The short version</b>
+      <ul>
+        <li>When you use the cloud engine, your recording and the text being corrected are sent to our speech and AI provider (Groq) to be processed, then returned to you. Voxly does not store your audio or your dictated text on its servers.</li>
+        <li>You can switch to the "This PC" engine so speech and correction run entirely on your computer.</li>
+        <li>Your dictation history, vocabulary, settings and logs are stored only on your computer. Logs never contain what you said.</li>
+        <li>Your account (email and sign-in details) and daily usage counts are stored with our account provider (Supabase).</li>
+        <li>We don't sell your data, show ads, or use analytics trackers in the app or on this website.</li>
+      </ul>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <b>Contents</b>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#collect">What we collect</a></li>
+        <li><a href="#engines">How engines handle your words</a></li>
+        <li><a href="#local">What stays on your PC</a></li>
+        <li><a href="#use">How we use data</a></li>
+        <li><a href="#share">Who we share it with</a></li>
+        <li><a href="#retention">How long we keep it</a></li>
+        <li><a href="#rights">Your choices and rights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#changes">Changes and contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="who">1. Who we are</h2>
+    <p>Voxly is a voice dictation app for Windows ("Voxly", "we", "us"). This policy explains what information the Voxly app, the Voxly Cloud service and this website handle, and why. It applies to everyone who downloads or uses Voxly.</p>
+
+    <h2 id="collect">2. What we collect</h2>
+    <table>
+      <thead><tr><th>Data</th><th>When</th><th>Where it goes</th></tr></thead>
+      <tbody>
+        <tr><td><b>Account details</b>: email address, a securely hashed password (if you use one), and your name and email from Google if you sign in with Google</td><td>When you create an account or sign in</td><td>Supabase (our account provider)</td></tr>
+        <tr><td><b>Usage counts</b>: seconds of audio and number of corrections per day, linked to your account</td><td>Each time you use Voxly Cloud</td><td>Supabase, to apply fair daily limits</td></tr>
+        <tr><td><b>Audio recordings</b> of what you dictate</td><td>Only while you hold or toggle the hotkey, and only with a cloud speech engine</td><td>Processed by Groq and returned as text. Not stored by Voxly</td></tr>
+        <tr><td><b>Text to correct</b>: your transcript, your vocabulary hints, the writing style for the app you are in, and (if "Use what's on screen" is on) up to about 1,500 characters of visible text near your cursor</td><td>Only when an online AI engine corrects a dictation</td><td>Processed by the AI provider and returned. Not stored by Voxly</td></tr>
+        <tr><td><b>Selected text</b></td><td>Only when you click an action on the selection button (Fix grammar, Rephrase, Shorter, Professional)</td><td>Processed by the AI engine you chose</td></tr>
+      </tbody>
+    </table>
+    <p>We do not collect your contacts, files, browsing history, keystrokes, or screenshots. Voxly never takes screenshots.</p>
+
+    <h2 id="engines">3. How engines handle your words</h2>
+    <p>Voxly lets you choose where speech recognition and correction happen. You can change this at any time in Settings.</p>
+    <ul>
+      <li><b>Voxly Cloud (default when signed in).</b> Your audio or text is sent over an encrypted connection (HTTPS) to a Voxly server function hosted on Supabase, which forwards it to Groq for processing and returns the result. The server checks your sign-in and records only usage counts. It does not save your audio or text.</li>
+      <li><b>Your own API key (Groq or Google Gemini).</b> If you add your own key, Voxly sends your audio or text directly from your PC to that provider under your own account and that provider's terms. Your key is stored on your PC.</li>
+      <li><b>This PC (offline).</b> Speech recognition (Whisper) and the optional offline AI run entirely on your computer. Nothing you say is sent over the internet. If you also use Ollama, it runs on your own machine.</li>
+      <li><b>Automatic fallback.</b> If an online engine fails or the internet drops, Voxly falls back to the engines on your PC.</li>
+    </ul>
+    <p>Third-party providers process data under their own privacy terms. You can read <a href="https://groq.com/privacy-policy/" rel="noopener">Groq's privacy policy</a>, <a href="https://supabase.com/privacy" rel="noopener">Supabase's privacy policy</a> and, if you use your own Gemini key, <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>.</p>
+
+    <h3>How Voxly picks a writing style</h3>
+    <p>To format text for email, chat or documents, Voxly reads the program name, the website address (only up to the first "/", for example <code>mail.google.com/mail</code>) and the label of the box you are typing in. This happens on your PC in a few milliseconds. Only the style name and its instructions are sent to the AI, never the window title or full web address. You can turn this off under Dictation, then "Match the app you are typing in".</p>
+
+    <h3>"Use what's on screen"</h3>
+    <p>When this setting is on, Voxly reads the visible text near your cursor to recognise names and words you might say. It is kept in memory for one dictation only, never saved or logged, and sent to the online AI only as context for that correction. You can turn it off in Settings.</p>
+
+    <h2 id="local">4. What stays on your PC</h2>
+    <ul>
+      <li><b>Dictation history</b>: your most recent 50 dictations, so you can copy or review them. You can turn history off in Settings.</li>
+      <li><b>Vocabulary and Slack lingo</b>: words you add, and anything learned from a Slack export you import. Slack exports are read on your PC and are not uploaded by Voxly. Only import messages you are authorised to use.</li>
+      <li><b>Settings and API keys</b> you enter.</li>
+      <li><b>Diagnostic logs</b>, stored in <code>%APPDATA%\Noroze\VoiceType\logs</code>. Logs record events, timings, sizes and errors. They never contain what you said or typed. Logs stay on your PC unless you choose to send them to us for support.</li>
+      <li><b>Downloaded models</b> for offline speech and AI.</li>
+    </ul>
+    <p>Uninstalling Voxly and deleting that app data folder removes this data from your PC.</p>
+
+    <h2 id="use">5. How we use data</h2>
+    <ul>
+      <li>To turn your speech into text and correct it, which is the service you asked for.</li>
+      <li>To run your account and keep you signed in.</li>
+      <li>To apply fair daily usage limits and prevent abuse.</li>
+      <li>To deliver app updates.</li>
+      <li>To answer support requests you send us.</li>
+    </ul>
+    <p>We do not sell personal data, use it for advertising, or use your dictations to train AI models. Where data protection laws require a legal basis, we rely on performing our agreement with you (providing the service), our legitimate interest in keeping the service secure and fair, and your consent where you give it (for example, signing in with Google).</p>
+
+    <h2 id="share">6. Who we share it with</h2>
+    <p>We share data only with service providers that help us run Voxly, and only as needed:</p>
+    <ul>
+      <li><b>Groq</b>: speech recognition and AI correction for cloud engines.</li>
+      <li><b>Supabase</b>: accounts, sign-in, usage counts and the Voxly Cloud server function.</li>
+      <li><b>Google</b>: only if you choose Google sign-in or your own Gemini key.</li>
+      <li><b>GitHub</b>: hosts app updates and this website. When Voxly checks for or downloads an update, GitHub receives standard request information such as your IP address.</li>
+      <li><b>Hugging Face</b>: hosts the offline speech and AI models. When you download one, Hugging Face receives standard request information.</li>
+    </ul>
+    <p>These providers may process data in countries other than yours, including the United States and Japan. We may also disclose information if required by law, or to protect the rights and safety of users or others.</p>
+
+    <h2 id="retention">7. How long we keep it</h2>
+    <ul>
+      <li>Audio and text sent to the cloud engine are not stored by Voxly after the result is returned. Providers may keep request data briefly under their own policies, for example to prevent abuse.</li>
+      <li>Account details are kept until you ask us to delete your account.</li>
+      <li>Daily usage counts are kept with your account and deleted when your account is deleted.</li>
+      <li>Data on your PC stays until you delete it or uninstall Voxly.</li>
+    </ul>
+
+    <h2 id="rights">8. Your choices and rights</h2>
+    <ul>
+      <li>Use the "This PC" engine to keep your voice and text off the internet.</li>
+      <li>Turn off history, "Use what's on screen", app style matching, or the selection button in Settings.</li>
+      <li>Sign out at any time.</li>
+      <li>Ask us to access, correct, export or delete your account data by contacting us (see below). Depending on where you live, you may also have the right to object to or restrict processing and to complain to your local data protection authority.</li>
+    </ul>
+
+    <h2 id="security">9. Security</h2>
+    <p>Data sent between Voxly and online services is encrypted with HTTPS. The Groq key used by Voxly Cloud is stored as a server secret and is never shipped inside the app. Passwords are handled by Supabase Auth and are not visible to us. No system is perfectly secure, so please use a strong, unique password.</p>
+
+    <h2 id="children">10. Children</h2>
+    <p>Voxly is not intended for children under 13 (or the minimum age required in your country), and we do not knowingly collect their data. If you believe a child has created an account, contact us and we will delete it.</p>
+
+    <h2 id="website">11. This website</h2>
+    <p>This website does not use cookies, analytics or advertising trackers. It is hosted on GitHub Pages, which may log standard request information such as IP addresses for security. The page asks GitHub for the latest Voxly version number so the download button points to the newest installer.</p>
+
+    <h2 id="changes">12. Changes and contact</h2>
+    <p>We may update this policy as Voxly changes. We will change the "Last updated" date above, and for significant changes we will let you know in the app or on this site.</p>
+    <p>Questions, data requests or concerns: <a href="https://github.com/itshassan999999-lab/Voxly-releases/issues" rel="noopener">contact us through the Voxly GitHub page</a>. Please don't post personal details publicly; ask us for a private contact if needed.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="" style="width:28px;height:28px">Voxly</a>
+    <nav><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Conditions</a></nav>
+    <span>© 2026 Voxly</span>
+  </div>
+</footer>
+</body>
+</html>
