@@ -207,3 +207,5 @@
 .vv-mute { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--surface-2); color: #fff; display: grid; place-items: center; cursor: pointer; flex: none; }
 .vv-mute svg { width: 18px; height: 18px; }
 @media (max-width: 600px) { .vv-sound { font-size: 14px; padding: 8px 16px 8px 8px; } .vv-sound span { width: 34px; height: 34px; } }
+.vp video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #07081a; }
+.vp.heard .vv-sound { opacity: 0; pointer-events: none; }

@@ -31,10 +31,10 @@
   const cursor = `<svg class="vv-cursor" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
 
   const scenes = [
-    { name: 'Intro', dur: 4.5, clip: 3.58, say: 'Meet Voxly. Talk, and clean text appears in any Windows app.', html: `
+    { name: 'Intro', dur: 2.5, clip: 0.94, say: 'Meet Voxly.', html: `
       <div class="vv-orbit">${['ear', 'brain', 'spell', 'style', 'wand', 'mic'].map((k, i) => { const a = i / 6 * Math.PI * 2; return `<i style="left:${237 + Math.cos(a) * 260}px;top:${237 + Math.sin(a) * 260}px">${svg(k)}</i>`; }).join('')}</div>
       <div class="vv-center"><img src="${LOGO}" alt=""><h3>Meet <span>Voxly</span></h3><p>Talk, and clean text appears in any Windows app.</p></div>` },
-    { name: 'The ears', dur: 6, clip: 4.8, say: "These are the ears. Hold Control and Windows, and talk. Let go, and it's typed for you.", html: `
+    { name: 'The ears', dur: 5, clip: 3.39, say: "Hold Control and Windows, and talk. Let go, and it's typed.", html: `
       ${head('01', 'The ears', 'Hold <span>Ctrl + Win</span> and talk', 'A small popup shows the mic is on. Let go, and your words are typed for you.')}
       <div class="vv-keys" data-keys><kbd>Ctrl</kbd>+<kbd>Win</kbd><span data-klabel>hold to talk</span></div>
       <div class="vv-chat"><div class="bar"><b>#</b>team-updates</div>
@@ -43,7 +43,7 @@
         <div class="vv-compose" data-compose></div>
       </div>
       <div class="vv-timer" data-timer>Release to paste<b>0.9 s</b></div>` },
-    { name: 'The brain', dur: 5.8, clip: 4.91, say: 'This is the brain. Use the fast cloud engine, or keep everything private on your PC.', html: `
+    { name: 'The brain', dur: 5, clip: 3.52, say: 'The brain: fast cloud AI, or fully private on your PC.', html: `
       ${head('02', 'The brain', 'Online <span>or offline</span> AI', 'Fast cloud speech and correction, or everything on your PC with no internet.')}
       ${badge('brain', 'The brain', 'Speech & AI settings')}
       <div class="vv-app">${rail('Speech & AI')}<div class="vv-page"><h4>Speech &amp; AI</h4><div class="desc">Where your voice is turned into text and corrected.</div>
@@ -54,7 +54,7 @@
           <div class="vv-seg"><span data-m="0">Raw</span><span data-m="1" class="on">Basic</span><span data-m="2">Advanced</span></div>
           <div class="vv-example" data-ex>The deploy is done. I think we can tell Guest Support.</div></div>
       </div></div>` },
-    { name: 'Vocabulary', dur: 5.6, clip: 4.74, say: 'This is your vocabulary. Names, products and team lingo, always spelled your way.', html: `
+    { name: 'Vocabulary', dur: 4.5, clip: 3.16, say: 'Your vocabulary keeps team names and lingo spelled right.', html: `
       ${head('03', 'The vocabulary', 'Your words, <span>always right</span>', 'Names, products and team lingo are never turned into ordinary English.')}
       ${badge('spell', 'Your dictionary', 'Add words or import Slack')}
       <div class="vv-app">${rail('Vocabulary')}<div class="vv-page"><h4>Vocabulary</h4><div class="desc">Words Voxly must always spell your way.</div>
@@ -64,34 +64,19 @@
           <div class="vv-fix"><s>h l p t</s> → <b>HLPT</b></div></div>
         <span class="vv-btn">Import Slack export</span> <span class="vv-btn ghost">Add a word</span>
       </div></div>` },
-    { name: 'The memory', dur: 5.7, clip: 4.82, say: 'And this is the memory. Voxly learns your rules and style, even from your edits.', html: `
+    { name: 'The memory', dur: 4.5, clip: 2.07, say: 'The memory learns your rules and your style.', html: `
       ${head('04', 'The memory', 'It learns <span>how you write</span>', 'Rules and style you set, plus fixes Voxly notices from your edits.')}
       ${badge('brain', 'The memory', 'Memory and skills')}
       <div class="vv-app">${rail('Memory')}<div class="vv-page"><h4>Memory and skills</h4><div class="desc">Used on every dictation that matches.</div>
         <div class="vv-card"><h5>Your rules and style</h5>
-          <div class="vv-mem" style="animation-delay:.5s"><em class="r">Rule</em>Write sub-account with a hyphen</div>
-          <div class="vv-mem" style="animation-delay:.8s"><em class="s">Style</em>Keep Slack messages short and friendly</div>
-          <div class="vv-mem" style="animation-delay:1.1s"><em class="s">Style</em>Sign emails with "Thanks, Alex"</div>
-          <div class="vv-mem" style="animation-delay:1.7s"><em class="n">Noticed</em><div>You changed "Hi team" to "Hey team"</div><div class="acts"><span class="yes" data-accept>Accept</span><span>Dismiss</span></div></div>
+          <div class="vv-mem" style="animation-delay:.35s"><em class="r">Rule</em>Write sub-account with a hyphen</div>
+          <div class="vv-mem" style="animation-delay:.6s"><em class="s">Style</em>Keep Slack messages short and friendly</div>
+          <div class="vv-mem" style="animation-delay:.9s"><em class="s">Style</em>Sign emails with "Thanks, Alex"</div>
+          <div class="vv-mem" style="animation-delay:1.2s"><em class="n">Noticed</em><div>You changed "Hi team" to "Hey team"</div><div class="acts"><span class="yes" data-accept>Accept</span><span>Dismiss</span></div></div>
         </div>
       </div></div>${cursor}` },
-    { name: 'Fits the app', dur: 4.6, clip: 3.71, say: 'Email, chat, or a customer reply. The text fits every app.', html: `
-      ${head('05', 'The style', 'Fits <span>every app</span>', 'Email gets a greeting and sign-off. Chat stays short. Support replies read clearly.')}
-      <div class="vv-said"><small>You said</small>hi mark the report is ready thanks alex</div>
-      <div class="vv-styles">
-        <div class="vv-sbox" style="animation-delay:.4s"><b><i style="background:#3d8bff">@</i>Email</b>Hi Mark,
-
-The report is ready.
-
-Thanks,
-Alex</div>
-        <div class="vv-sbox" style="animation-delay:.8s"><b><i style="background:#7c5cff">#</i>Chat</b>Hi Mark, the report is ready. Thanks, Alex</div>
-        <div class="vv-sbox" style="animation-delay:1.2s"><b><i style="background:#16a34a">G</i>Customer reply</b>Hi Mark,
-
-Thanks for your patience. The report is ready for you now.</div>
-      </div>` },
-    { name: 'The fixer', dur: 6, clip: 3.93, say: 'Select any text, click Voxly, and make it professional in one click.', html: `
-      ${head('06', 'The fixer', 'Fix any text <span>in one click</span>', 'Select text anywhere. Fix grammar, rephrase, shorten, or make it professional.')}
+    { name: 'The fixer', dur: 5, clip: 2.88, say: 'Select any text, and make it professional in one click.', html: `
+      ${head('05', 'The fixer', 'Fix any text <span>in one click</span>', 'Select text anywhere. Fix grammar, rephrase, shorten, or make it professional.')}
       ${badge('wand', 'Selection button', 'Works in any app')}
       <div class="vv-doc"><h6>Draft · Notes</h6><div class="t" data-doc>hey can u send me them reports by friday its kinda urgent thx</div>
         <div class="vv-fixbtn" data-fb><img src="${LOGO}" alt="">Voxly</div>
@@ -99,7 +84,7 @@ Thanks for your patience. The report is ready for you now.</div>
         <div class="vv-undo" data-undo><span>Undo</span>Ctrl+Z puts the original back</div>
         ${cursor}
       </div>` },
-    { name: 'Get Voxly', dur: 4, clip: 1.69, say: "Voxly. Speak. It's written.", html: `
+    { name: 'Get Voxly', dur: 3.5, clip: 1.64, say: "Voxly. Speak. It's written.", html: `
       <div class="vv-center"><img src="${LOGO}" alt=""><h3>Speak. <span>It's written.</span></h3><p>Free for Windows 10 and 11</p>
         <div class="row"><span>Online + offline</span><span>Grammar fixes</span><span>Your vocabulary</span><span>Starts with Windows</span></div></div>` },
   ];
@@ -133,7 +118,7 @@ Thanks for your patience. The report is ready for you now.</div>
   const caption = (i, t) => {
     if (capFor !== i) { capP.innerHTML = capHTML[i]; capFor = i; }
     const sc = scenes[i], words = capWords[i];
-    const k = (t - 0.35) / sc.clip; // 0..1 through the spoken line
+    const k = (t - 0.3) / sc.clip; // 0..1 through the spoken line
     const total = words.reduce((a, w) => a + w.length + 1, 0);
     let acc = 0;
     capP.querySelectorAll('span').forEach((sp, j) => { acc += words[j].length + 1; sp.classList.toggle('said', k * total >= acc - words[j].length - 1 && k > 0); });
@@ -182,44 +167,43 @@ Thanks for your patience. The report is ready for you now.</div>
     () => {},
     (t) => {
       const keys = q(1, '[data-keys]'), lab = q(1, '[data-klabel]'), pill = q(1, '[data-pill]'), st = q(1, '[data-pstate]'), comp = q(1, '[data-compose]'), timer = q(1, '[data-timer]');
-      const rec = t > 0.9 && t < 3.7, work = t >= 3.7 && t < 4.4;
-      keys.classList.toggle('down', rec); lab.textContent = rec ? 'recording' : t >= 3.7 ? 'released' : 'hold to talk';
+      const rec = t > 0.5 && t < 2.9, work = t >= 2.9 && t < 3.4;
+      keys.classList.toggle('down', rec); lab.textContent = rec ? 'recording' : t >= 2.9 ? 'released' : 'hold to talk';
       pill.classList.toggle('show', rec || work); pill.classList.toggle('work', work); st.textContent = work ? 'Correcting…' : 'Listening…';
       bars.forEach((b, i) => { b.style.height = `${rec ? 4 + Math.abs(Math.sin(t * 9 + i * 0.7)) * (6 + (i % 4) * 3) : 4}px`; });
-      timer.classList.toggle('show', t > 4.4);
-      if (t < 1.1) comp.innerHTML = '<span class="raw">Message #team-updates</span>';
-      else if (t < 4.4) { const w = RAW.split(' '); comp.innerHTML = `<span class="raw">${esc(w.slice(0, Math.min(w.length, Math.floor((t - 1.1) / 2.5 * w.length) + 1)).join(' '))}</span>`; }
-      else comp.innerHTML = hlText(OUT, Math.floor((t - 4.4) * 90));
+      timer.classList.toggle('show', t > 3.4);
+      if (t < 0.7) comp.innerHTML = '<span class="raw">Message #team-updates</span>';
+      else if (t < 3.4) { const w = RAW.split(' '); comp.innerHTML = `<span class="raw">${esc(w.slice(0, Math.min(w.length, Math.floor((t - 0.7) / 2.1 * w.length) + 1)).join(' '))}</span>`; }
+      else comp.innerHTML = hlText(OUT, Math.floor((t - 3.4) * 120));
     },
     (t) => {
-      const mode = t < 1.6 ? 1 : t < 3.2 ? 0 : 2;
+      const mode = t < 1.2 ? 1 : t < 2.4 ? 0 : 2;
       qa(2, '[data-m]').forEach((s, i) => s.classList.toggle('on', i === mode));
       q(2, '[data-ex]').textContent = EXAMPLES[mode];
-      const eng = t > 4.2 ? 1 : 0;
+      const eng = t > 3.6 ? 1 : 0;
       qa(2, '[data-r]').forEach((r, i) => r.classList.toggle('on', i === eng));
     },
     () => {},
     (t) => {
       const c = q(4, '.vv-cursor'), acc = q(4, '[data-accept]');
-      c.style.left = t < 2.6 ? '900px' : '808px'; c.style.top = t < 2.6 ? '480px' : '342px';
-      c.classList.toggle('click', t > 3.3 && t < 3.5); acc.classList.toggle('done', t > 3.4);
-      acc.textContent = t > 3.4 ? 'Saved' : 'Accept';
+      c.style.left = t < 1.9 ? '900px' : '808px'; c.style.top = t < 1.9 ? '480px' : '342px';
+      c.classList.toggle('click', t > 2.6 && t < 2.8); acc.classList.toggle('done', t > 2.7);
+      acc.textContent = t > 2.7 ? 'Saved' : 'Accept';
     },
-    () => {},
     (t) => {
-      const doc = q(6, '[data-doc]'), fb = q(6, '[data-fb]'), menu = q(6, '[data-menu]'), pro = q(6, '[data-pro]'), undo = q(6, '[data-undo]'), c = q(6, '.vv-cursor');
+      const doc = q(5, '[data-doc]'), fb = q(5, '[data-fb]'), menu = q(5, '[data-menu]'), pro = q(5, '[data-pro]'), undo = q(5, '[data-undo]'), c = q(5, '.vv-cursor');
       const src = 'hey can u send me them reports by friday its kinda urgent thx';
       const fixed = 'Hi, could you please send me the reports by Friday? It is fairly urgent. Thank you.';
-      const selN = t < 0.8 ? 0 : Math.min(src.length, Math.floor((t - 0.8) / 0.9 * src.length));
-      if (t < 4.1) doc.innerHTML = `<span class="sel">${esc(src.slice(0, selN))}</span>${esc(src.slice(selN))}`;
+      const selN = t < 0.5 ? 0 : Math.min(src.length, Math.floor((t - 0.5) / 0.7 * src.length));
+      if (t < 3.2) doc.innerHTML = `<span class="sel">${esc(src.slice(0, selN))}</span>${esc(src.slice(selN))}`;
       else doc.textContent = fixed;
-      fb.classList.toggle('show', t > 1.9 && t < 4.1);
-      menu.classList.toggle('show', t > 2.7 && t < 4.1);
-      pro.classList.toggle('hot', t > 3.4 && t < 4.1);
-      undo.classList.toggle('show', t > 4.3);
-      const pos = t < 0.8 ? [26, 48] : t < 1.7 ? [500, 72] : t < 2.5 ? [80, 162] : t < 3.6 ? [100, 288] : [470, 330];
+      fb.classList.toggle('show', t > 1.4 && t < 3.2);
+      menu.classList.toggle('show', t > 2.0 && t < 3.2);
+      pro.classList.toggle('hot', t > 2.6 && t < 3.2);
+      undo.classList.toggle('show', t > 3.4);
+      const pos = t < 0.5 ? [26, 48] : t < 1.2 ? [500, 72] : t < 1.9 ? [80, 162] : t < 2.8 ? [100, 288] : [470, 330];
       c.style.left = pos[0] + 'px'; c.style.top = pos[1] + 'px';
-      c.classList.toggle('click', (t > 2.5 && t < 2.65) || (t > 3.6 && t < 3.75));
+      c.classList.toggle('click', (t > 1.9 && t < 2.05) || (t > 2.8 && t < 2.95));
     },
     () => {},
   ];

@@ -187,3 +187,32 @@
     o.observe(demo);
   } else start();
 })();
+
+// Demo video: muted autoplay while visible; "Play with sound" or the first tap anywhere turns sound on.
+(() => {
+  const box = document.getElementById('demoPlayer');
+  if (!box) return;
+  const v = box.querySelector('video');
+  const btn = box.querySelector('.vv-sound');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let heard = false;
+  const withSound = (restart) => {
+    heard = true; box.classList.add('heard');
+    v.muted = false; v.controls = true;
+    if (restart) v.currentTime = 0;
+    v.play().catch(() => {});
+  };
+  btn.addEventListener('click', (e) => { e.stopPropagation(); withSound(true); });
+  const first = (e) => {
+    document.removeEventListener('pointerdown', first, true);
+    if (heard || box.contains(e.target)) return;
+    if (!v.paused) withSound(false); else { v.muted = false; }
+  };
+  document.addEventListener('pointerdown', first, true);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((en) => {
+      if (en[0].isIntersecting) { if (!reduce || heard) v.play().catch(() => {}); }
+      else v.pause();
+    }, { threshold: 0.4 }).observe(box);
+  } else if (!reduce) v.play().catch(() => {});
+})();
