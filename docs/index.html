@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voxly: Voice dictation for Windows</title>
+<meta name="description" content="Hold Ctrl + Win, speak, and let go. Voxly turns your voice into clean, corrected text and pastes it into any Windows app in about a second.">
+<meta name="theme-color" content="#070815">
+<link rel="canonical" href="https://itshassan999999-lab.github.io/Voxly-releases/">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="preload" href="assets/fonts/jakarta-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Voxly">
+<meta property="og:title" content="Voxly: Speak. It's written.">
+<meta property="og:description" content="Voice dictation for Windows with built-in grammar correction. Hold Ctrl + Win, talk, and clean text lands in any app in about a second.">
+<meta property="og:url" content="https://itshassan999999-lab.github.io/Voxly-releases/">
+<meta property="og:image" content="https://itshassan999999-lab.github.io/Voxly-releases/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Voxly: speak and it's written. Voice dictation with AI correction for Windows.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voxly: Speak. It's written.">
+<meta name="twitter:description" content="Voice dictation for Windows with built-in grammar correction.">
+<meta name="twitter:image" content="https://itshassan999999-lab.github.io/Voxly-releases/assets/og-image.png">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Voxly","operatingSystem":"Windows 10, Windows 11","applicationCategory":"ProductivityApplication","description":"Voice dictation for Windows with AI grammar correction.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://itshassan999999-lab.github.io/Voxly-releases/"}
+</script>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Voxly home"><img src="assets/logo.png" alt="" width="34" height="34">Voxly</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="hide-sm" href="#how">How it works</a>
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#privacy">Privacy</a>
+      <a class="hide-sm" href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm js-download" href="https://github.com/itshassan999999-lab/Voxly-releases/releases/latest">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow reveal"><b>New</b> Free for Windows 10 and 11</span>
+        <h1 class="reveal d1">Speak.<br><span class="grad-text">It's written.</span></h1>
+        <p class="lede reveal d2">Hold <kbd>Ctrl</kbd> + <kbd>Win</kbd>, say what you mean, and let go. Voxly turns your voice into clean, corrected text and pastes it into Slack, Gmail, Word or any app, in about a second.</p>
+        <div class="cta-row reveal d3">
+          <a class="btn btn-primary js-download" href="https://github.com/itshassan999999-lab/Voxly-releases/releases/latest">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.4 4.5v7H3v-6Zm0 13 7.4 1v-7H3v6Zm8.3 1.1L21 21v-8.5h-9.7v7.1Zm0-15.2v7.1H21V3l-9.7 1.4Z"/></svg>
+            <span class="js-download-label">Download for Windows</span>
+          </a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+        <div class="cta-note reveal d3">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>No admin rights needed</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>Starts with Windows</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg>Updates itself</span>
+        </div>
+      </div>
+
+      <div class="demo reveal d2" aria-label="Animated demo of Voxly turning speech into corrected text">
+        <div class="demo-glow"></div>
+        <div class="keys-hint" id="keysHint"><kbd>Ctrl</kbd>+<kbd>Win</kbd><span id="keysLabel">hold to talk</span></div>
+        <div class="window">
+          <div class="win-bar">
+            <div class="win-dots"><i></i><i></i><i></i></div>
+            <div class="win-title"><span class="app-ico" id="appIco" style="background:#7c5cff">#</span><span id="appName">team-updates</span></div>
+            <div class="win-tabs" role="tablist" aria-label="Demo app">
+              <button class="on" data-scene="0" role="tab">Chat</button>
+              <button data-scene="1" role="tab">Email</button>
+              <button data-scene="2" role="tab">Support</button>
+            </div>
+          </div>
+          <div class="win-body">
+            <div class="msg" id="ctxMsg">
+              <div class="avatar" style="background:linear-gradient(135deg,#ff8a4d,#ff4d8d)">SR</div>
+              <div><div class="who">Sara <small>9:41 AM</small></div><div class="txt" id="ctxText">Is the HLPT fix live yet? Guest Support keeps asking.</div></div>
+            </div>
+            <div class="compose" aria-live="polite">
+              <span class="raw" id="rawText"></span><span class="typed" id="typedText"></span><span class="caret" id="caret"></span>
+              <span class="placeholder" id="ph">Message #team-updates</span>
+            </div>
+            <div class="pill" id="pill">
+              <span class="dot"></span>
+              <span class="bars" id="bars"></span>
+              <span class="spin"></span>
+              <span class="state" id="pillState">Listening…</span>
+            </div>
+          </div>
+        </div>
+        <div class="timer-chip" id="timerChip"><span>Release to paste</span><b id="timerVal">1.1 s</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat reveal"><b class="grad-text" data-count="0.2" data-suffix=" s">0.2 s</b><span>Speech to text on the cloud engine</span></div>
+        <div class="stat reveal d1"><b class="grad-text">~1 s</b><span>From letting go to text in your app (0.8 to 1.4 s measured)</span></div>
+        <div class="stat reveal d2"><b class="grad-text" data-count="13">13</b><span>Color themes, light and dark</span></div>
+        <div class="stat reveal d3"><b class="grad-text">Any app</b><span>Pastes wherever your cursor is</span></div>
+      </div>
+      <p class="works-in">Works in the apps you already use</p>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Slack</span><span>Gmail</span><span>Outlook</span><span>Microsoft Teams</span><span>Word</span><span>Google Docs</span><span>Notion</span><span>Chrome</span><span>Edge</span><span>WhatsApp</span><span>GoHighLevel</span><span>Confluence</span><span>Discord</span><span>Notepad</span>
+          <span>Slack</span><span>Gmail</span><span>Outlook</span><span>Microsoft Teams</span><span>Word</span><span>Google Docs</span><span>Notion</span><span>Chrome</span><span>Edge</span><span>WhatsApp</span><span>GoHighLevel</span><span>Confluence</span><span>Discord</span><span>Notepad</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">How it works</span>
+        <h2>Three moves. <span class="grad-text">Zero typing.</span></h2>
+        <p>No window to open, no button to find. Voxly waits quietly in your tray until you need it.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#3d8bff"/><stop offset="1" stop-color="#d16cff"/></linearGradient></defs><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></div>
+          <h3>Hold <kbd>Ctrl</kbd> + <kbd>Win</kbd></h3>
+          <p>In any app. A small recording pill appears instantly so you always know the mic is on. Quick tap for hands-free mode.</p>
+        </div>
+        <div class="step reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></svg></div>
+          <h3>Speak naturally</h3>
+          <p>Ums, restarts and "scratch that" are fine. Say "new line" or "new paragraph" when you want one.</p>
+        </div>
+        <div class="step reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4H9zM8 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="m9 14 2 2 4-4"/></svg></div>
+          <h3>Let go</h3>
+          <p>Clean, corrected text is pasted right where your cursor is. Press <kbd>Esc</kbd> any time to cancel and insert nothing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Features</span>
+        <h2>Write like your <span class="grad-text">best self</span>, at the speed of talking</h2>
+        <p>Voxly does more than transcribe. It fixes grammar, keeps your company's words right, and formats for the app you're in.</p>
+      </div>
+
+      <div class="bento">
+        <article class="card tall reveal">
+          <span class="k">AI correction</span>
+          <h3>Grammar fixed before it lands</h3>
+          <p>Spelling, punctuation and sentence structure are corrected and filler words removed, while keeping your meaning and your voice. Pick how much help you want.</p>
+          <div class="viz modes">
+            <div class="mode"><b>You said</b><span class="strike">um so yeah the the deploy is uh done i think we can tell guest support</span></div>
+            <div class="mode"><b>Raw</b>um so yeah the the deploy is uh done i think we can tell Guest Support</div>
+            <div class="mode on"><b>Basic</b>The deploy is done. I think we can tell Guest Support.</div>
+            <div class="mode"><b>Advanced</b>The deploy is done, so we can let Guest Support know.</div>
+          </div>
+        </article>
+
+        <article class="card reveal d1">
+          <span class="k">Workplace vocabulary</span>
+          <h3>Knows your lingo</h3>
+          <p>Names, teams, products and acronyms stay exactly right. Add your own words or learn them from a Slack export.</p>
+          <div class="viz chips">
+            <span>GoHighLevel</span><span>HLPT</span><span>GHL</span><span>Guest Support</span><span class="x">go high level</span><span class="x">help tea</span>
+          </div>
+        </article>
+
+        <article class="card wide reveal">
+          <span class="k">Fix selected text</span>
+          <h3>A Grammarly-style button, everywhere</h3>
+          <p>Select text in any app and a small Voxly button appears. Fix it, rephrase it, shorten it, or make it professional. Undo puts the original back.</p>
+          <div class="viz sel-demo" id="selDemo">
+            <div><mark id="selSrc">hey can u send me them reports by friday its kinda urgent thx</mark></div>
+            <div class="sel-menu" id="selMenu">
+              <span data-i="0" class="on">Fix grammar</span><span data-i="1">Rephrase</span><span data-i="2">Shorter</span><span data-i="3">Professional</span>
+            </div>
+            <div class="sel-out" id="selOut">Hey, can you send me those reports by Friday? It's kind of urgent. Thanks!</div>
+          </div>
+        </article>
+
+        <article class="card wide reveal d1">
+          <span class="k">Fits the app</span>
+          <h3>Email reads like email. Slack reads like Slack.</h3>
+          <p>Voxly sees which app you're typing in and lays the text out to match. It never adds a greeting or sign-off you didn't say.</p>
+          <div class="viz styles-viz">
+            <div class="style-box"><b>Email</b>Hi Mark,
+
+The report is ready.
+
+Thanks,
+Alex</div>
+            <div class="style-box"><b>Chat</b>Hey team, the report is ready. Thanks!</div>
+            <div class="style-box"><b>Docs</b>The report is ready for review. It covers the full quarter.</div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <span class="k">Voice commands</span>
+          <h3>Edit with your voice</h3>
+          <div class="viz cmd-list">
+            <div><q>scratch that</q><span>drops the last sentence</span></div>
+            <div><q>new paragraph</q><span>starts a new paragraph</span></div>
+            <div><q>number one…</q><span>makes a list</span></div>
+          </div>
+        </article>
+
+        <article class="card reveal d1">
+          <span class="k">Always ready</span>
+          <h3>Starts with Windows</h3>
+          <p>Launches when you sign in and lives in the tray. Switch modes, pause, or copy your last dictation from there.</p>
+          <div class="viz tray"><img src="assets/logo.png" alt="">Voxly is ready<span class="clock" id="clock">9:41</span></div>
+        </article>
+
+        <article class="card reveal d2">
+          <span class="k">Make it yours</span>
+          <h3>13 themes</h3>
+          <p>From classic indigo to Midnight, Paper and High contrast. Light or dark.</p>
+          <div class="viz swatches" aria-label="Theme colors">
+            <i style="background:#5b5bd6" title="Voxly"></i><i style="background:#1e88e5" title="Ocean"></i><i style="background:#2e7d32" title="Forest"></i><i style="background:#00897b" title="Lagoon"></i><i style="background:#f4511e" title="Sunset"></i><i style="background:#d81b60" title="Rose"></i><i style="background:#c62828" title="Cherry"></i><i style="background:#ffb300" title="Amber"></i><i style="background:#9575cd" title="Lavender"></i><i style="background:#607d8b" title="Graphite"></i><i style="background:#000;border-color:#3d5afe" title="Midnight"></i><i style="background:#efe6dc" title="Paper"></i><i style="background:linear-gradient(135deg,#000 50%,#ffeb3b 50%)" title="High contrast"></i>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="section" id="privacy">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Privacy and control</span>
+        <h2>Fast in the cloud. <span class="grad-text">Private on your PC.</span></h2>
+        <p>You choose where your words are processed, and Voxly keeps as little as it can.</p>
+      </div>
+      <div class="split">
+        <div class="panel reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>What stays on your PC</h3>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Your history and vocabulary</b> are saved only on your computer.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Logs never contain what you said</b>, only events, timings and errors.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>No screenshots.</b> Voxly reads only the app name and the box you're typing in to pick a style.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Passwords are off limits.</b> The selection button never appears in password boxes.</span></li>
+          </ul>
+        </div>
+        <div class="panel reveal d1">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7Z"/></svg>Your choice of engine</h3>
+          <ul class="ticks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Cloud (default)</b> sends your audio to a fast speech engine for near-instant results. Voxly doesn't keep your audio or your text.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>On this PC</b> runs speech recognition and an optional offline AI entirely on your computer, with no internet needed.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Bring your own key</b> for Groq or Gemini if you prefer your own account.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 12 5 5L20 7"/></svg><span><b>Automatic backup.</b> If the internet drops, Voxly falls back to your PC.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="works-in" style="margin-top:22px">Read the full <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">FAQ</span>
+        <h2>Questions, answered</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>Is Voxly free?</summary><p>Yes, Voxly is free to download and use. Cloud usage has a fair daily limit per account so the service stays fast for everyone.</p></details>
+        <details class="reveal"><summary>Which computers does it work on?</summary><p>Windows 10 and 11, 64-bit. The app and speech model take about 300 MB, plus about 1 GB if you add the optional offline AI. Mac is not supported yet.</p></details>
+        <details class="reveal"><summary>Does it work offline?</summary><p>Yes. Speech recognition can run on your PC, and a one-click offline AI (about 1 GB, downloaded once) corrects grammar with no internet. Without it, Voxly still cleans up fillers and punctuation.</p></details>
+        <details class="reveal"><summary>Will it get my company's words right?</summary><p>Add names, products and acronyms to your vocabulary, or import a Slack export you're allowed to use, and Voxly keeps those terms exactly as you spell them. It ships knowing GoHighLevel terms like GHL and HLPT.</p></details>
+        <details class="reveal"><summary>How do I cancel a recording?</summary><p>Press <kbd>Esc</kbd> while recording. Nothing is inserted.</p></details>
+        <details class="reveal"><summary>Windows showed a SmartScreen warning. Is that normal?</summary><p>Voxly is a new app, so Windows may show "Windows protected your PC" the first time. Click <b>More info</b>, then <b>Run anyway</b>. Only download Voxly from this site or its official GitHub releases page.</p></details>
+        <details class="reveal"><summary>How do updates work?</summary><p>Voxly checks for new versions and updates itself. You can also check any time under Home, then Updates, then Check now.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap">
+    <div class="cta reveal">
+      <img class="logo" src="assets/logo.png" alt="Voxly logo" width="84" height="84">
+      <h2>Stop typing. <span class="grad-text">Start talking.</span></h2>
+      <p>Install in under a minute. Voxly starts with Windows, so it's ready the next time you need it.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary js-download" href="https://github.com/itshassan999999-lab/Voxly-releases/releases/latest">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.4 4.5v7H3v-6Zm0 13 7.4 1v-7H3v6Zm8.3 1.1L21 21v-8.5h-9.7v7.1Zm0-15.2v7.1H21V3l-9.7 1.4Z"/></svg>
+          <span class="js-download-label">Download for Windows</span>
+        </a>
+      </div>
+      <div class="reqs"><span>Windows 10 or 11, 64-bit</span><span>About 300 MB</span><span>No admin rights</span><span id="verNote">Latest version</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="28" height="28" style="width:28px;height:28px">Voxly</a>
+    <nav aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms and Conditions</a>
+      <a href="https://github.com/itshassan999999-lab/Voxly-releases/releases">Release notes</a>
+    </nav>
+    <span>© <span id="yr">2026</span> Voxly. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
