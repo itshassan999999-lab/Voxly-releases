@@ -424,6 +424,43 @@ footer a:hover { color: #fff; }
 @media (max-width: 980px) { .timer-chip { left: 12px; } }
 @media (max-width: 600px) { .timer-chip { left: auto; right: 8px; top: auto; bottom: -22px; } }
 
+/* Comparison */
+.hl-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+@media (max-width: 860px) { .hl-row { grid-template-columns: 1fr; } }
+.hl { padding: 20px 22px; border-radius: 16px; background: linear-gradient(135deg, rgba(61,139,255,.12), rgba(209,108,255,.12)); border: 1px solid rgba(124,92,255,.35); }
+.hl b { display: block; font-family: "Jakarta", sans-serif; font-size: 18px; margin-bottom: 4px; }
+.hl span { color: var(--muted); font-size: 15px; }
+.cmp-wrap { border-radius: 22px; border: 1px solid var(--line-2); background: var(--surface); overflow: hidden; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 15.5px; }
+.cmp th, .cmp td { padding: 15px 22px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+.cmp thead th { font-family: "Jakarta", sans-serif; font-size: 18px; font-weight: 800; color: #fff; padding-top: 22px; padding-bottom: 18px; }
+.cmp thead th img { display: inline-block; width: 26px; height: 26px; border-radius: 7px; vertical-align: -7px; margin-right: 10px; }
+.cmp tbody th { font-weight: 500; color: var(--text); width: 42%; }
+.cmp td { color: var(--muted); font-size: 14.5px; width: 29%; }
+.cmp .vx { background: rgba(124,92,255,.09); color: #dfe2ff; }
+.cmp thead .vx { background: linear-gradient(180deg, rgba(124,92,255,.3), rgba(124,92,255,.09)); }
+.cmp tbody tr:hover th, .cmp tbody tr:hover td { background-color: rgba(255,255,255,.025); }
+.cmp tbody tr:hover .vx { background-color: rgba(124,92,255,.14); }
+.cmp .y, .cmp .n { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; margin-right: 10px; vertical-align: -6px; flex: none; }
+.cmp .y { background: rgba(61,220,151,.16); color: var(--green); }
+.cmp .n { background: rgba(255,255,255,.06); color: var(--faint); }
+.cmp .y svg, .cmp .n svg { width: 13px; height: 13px; }
+.cmp .p { display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(255,184,77,.12); color: #ffc27a; font-size: 13px; }
+.cmp-note { margin-top: 14px; font-size: 13px; color: var(--faint); text-align: center; }
+@media (max-width: 680px) {
+  .cmp { font-size: 14px; }
+  .cmp th, .cmp td { padding: 12px 10px; }
+  .cmp thead th { font-size: 15px; }
+  .cmp thead th img { display: none; }
+  .cmp tbody th { width: 40%; font-size: 14px; }
+  .cmp td { font-size: 12.5px; }
+  .cmp .y, .cmp .n { display: grid; margin: 0 0 4px; }
+}
+.cmp .cell { display: flex; align-items: center; gap: 10px; }
+.cmp .cell .y, .cmp .cell .n { margin: 0; }
+@media (max-width: 680px) { .cmp .cell { flex-direction: column; align-items: flex-start; gap: 4px; } }
+
 </style>
 <script>document.documentElement.classList.remove('no-js');</script>
 </head>
@@ -436,6 +473,7 @@ footer a:hover { color: #fff; }
     <nav class="nav-links" aria-label="Main">
       <a class="hide-sm" href="#how">How it works</a>
       <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#compare">Compare</a>
       <a class="hide-sm" href="#privacy">Privacy</a>
       <a class="hide-sm" href="#faq">FAQ</a>
       <a class="btn btn-primary btn-sm js-download" href="https://github.com/itshassan999999-lab/Voxly-releases/releases/latest">Download</a>
@@ -633,6 +671,47 @@ Alex</div>
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="section" id="compare">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Compare</span>
+        <h2>Voxly vs <span class="grad-text">Wispr Flow</span></h2>
+        <p>Both turn your voice into polished text. Voxly adds an offline mode, Grammarly-style rewrite buttons and your workplace vocabulary, for free.</p>
+      </div>
+      <div class="hl-row">
+        <div class="hl reveal"><b>Online and offline</b><span>Fast cloud engine, or everything on your PC. Your choice.</span></div>
+        <div class="hl reveal d1"><b>Grammarly-style rewrites</b><span>Fix, Rephrase, Shorter and Professional on any selected text.</span></div>
+        <div class="hl reveal d2"><b>Built for your workplace</b><span>Keeps GHL, HLPT and your team's names exactly right.</span></div>
+      </div>
+      <div class="cmp-wrap reveal">
+        <table class="cmp">
+          <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col" class="vx"><img src="https://itshassan999999-lab.github.io/Voxly-releases/assets/logo.png" alt="" width="26" height="26">Voxly</th><th scope="col">Wispr Flow</th></tr></thead>
+          <tbody>
+          <tr><th scope="row">Price</th><td class="vx"><span class="cell">Free</span></td><td><span class="cell">Limited free plan, Pro is paid</span></td></tr>
+          <tr><th scope="row">Works offline, no internet needed</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Speech and AI on your PC</span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span>Cloud only</span></td></tr>
+          <tr><th scope="row">Choose online or on-PC engine</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Cloud, This PC, or both with auto backup</span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">Use your own Groq or Gemini key</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">AI grammar and punctuation fixes</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Pick how much it rewrites</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Raw, Basic or Advanced</span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Style settings</span></td></tr>
+          <tr><th scope="row">One-click Fix, Rephrase, Shorter, Professional on any selected text</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Button appears next to your selection</span></td><td><span class="cell"><span class="p">By voice command</span></span></td></tr>
+          <tr><th scope="row">Formats for email, chat and docs</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Custom vocabulary</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Learn your team's lingo from a Slack export</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">Ships knowing GoHighLevel and HLPT terms</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">Voice commands and snippets</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Keep your voice on your PC</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>Pick the This PC engine</span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">13 color themes</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td><td><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span></span></td></tr>
+          <tr><th scope="row">Text pasted in about a second</th><td class="vx"><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span>0.8 to 1.4 s measured</span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Mac and iPhone</th><td class="vx"><span class="cell"><span class="n" aria-label="No"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6 6 18"/></svg></span>Windows only for now</span></td><td><span class="cell"><span class="y" aria-label="Yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg></span></span></td></tr>
+          <tr><th scope="row">Languages</th><td class="vx"><span class="cell">English</span></td><td><span class="cell">100+</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cmp-note">Wispr Flow details are from its public website and help pages as of November 2026 and may change. Wispr Flow is a trademark of its owner. Voxly is an independent app and is not affiliated with Wispr.</p>
     </div>
   </section>
 
