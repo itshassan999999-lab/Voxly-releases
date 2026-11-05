@@ -5,7 +5,7 @@ Images and the legal pages point at the hosted site. Run: python3 tools/build_si
 import base64, pathlib, re
 
 DOCS = pathlib.Path(__file__).resolve().parent.parent / "docs"
-BASE = "https://itshassan999999-lab.github.io/Voxly-releases/"
+BASE = "https://voxly.snthropic.com/"
 
 html = (DOCS / "index.html").read_text()
 css = (DOCS / "assets/site.css").read_text()
