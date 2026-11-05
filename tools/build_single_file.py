@@ -21,7 +21,7 @@ html = html.replace('<link rel="stylesheet" href="assets/video.css">', "")
 html = html.replace('<link rel="stylesheet" href="assets/site.css">', f"<style>\n{css}\n</style>")
 html = html.replace('<script src="assets/video.js" defer></script>', f"<script>\n{vjs}\n</script>")
 html = html.replace('<script src="assets/site.js" defer></script>', f"<script>\n{js}\n</script>")
-html = re.sub(r'(src|href|data-logo|data-audio)="(assets/[^"]+|privacy\.html|terms\.html)"', lambda m: f'{m[1]}="{BASE}{m[2]}"', html)
+html = re.sub(r'(src|href|poster|data-logo|data-audio)="(assets/[^"]+|privacy\.html|terms\.html)"', lambda m: f'{m[1]}="{BASE}{m[2]}"', html)
 
 out = DOCS / "voxly-single-file.html"
 out.write_text(html)
