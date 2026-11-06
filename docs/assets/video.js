@@ -38,7 +38,7 @@
       ${head('01', 'The ears', 'Hold <span>Ctrl + Win</span> and talk', 'A small popup shows the mic is on. Let go, and your words are typed for you.')}
       <div class="vv-keys" data-keys><kbd>Ctrl</kbd>+<kbd>Win</kbd><span data-klabel>hold to talk</span></div>
       <div class="vv-chat"><div class="bar"><b>#</b>team-updates</div>
-        <div class="m"><i>SR</i><div><b>Sara</b>Is the HLPT fix live yet? Guest Support keeps asking.</div></div>
+        <div class="m"><i>MR</i><div><b>Maya</b>Is the GHL calendar fix live yet? The support team keeps asking.</div></div>
         <div class="vv-pill" data-pill><span class="rec"></span><span class="bars" data-bars></span><span data-pstate>Listening…</span></div>
         <div class="vv-compose" data-compose></div>
       </div>
@@ -52,16 +52,16 @@
           <div class="vv-radio" data-r="1"><span class="dot"></span><div>This PC<small>Private and offline</small></div></div></div>
         <div class="vv-card"><h5>Correction mode</h5>
           <div class="vv-seg"><span data-m="0">Raw</span><span data-m="1" class="on">Basic</span><span data-m="2">Advanced</span></div>
-          <div class="vv-example" data-ex>The deploy is done. I think we can tell Guest Support.</div></div>
+          <div class="vv-example" data-ex>The deploy is done. I think we can tell the support team.</div></div>
       </div></div>` },
     { name: 'Vocabulary', dur: 4.5, clip: 3.16, say: 'Your vocabulary keeps team names and lingo spelled right.', html: `
       ${head('03', 'The vocabulary', 'Your words, <span>always right</span>', 'Names, products and team lingo are never turned into ordinary English.')}
       ${badge('spell', 'Your dictionary', 'Add words or import Slack')}
       <div class="vv-app">${rail('Vocabulary')}<div class="vv-page"><h4>Vocabulary</h4><div class="desc">Words Voxly must always spell your way.</div>
-        <div class="vv-card"><h5>Your words</h5><div class="vv-chips">${['GoHighLevel', 'HLPT', 'GHL', 'Guest Support', 'LeadConnector', 'sub-account', 'Snapshots', 'Workflows'].map((w, i) => `<span style="animation-delay:${0.5 + i * 0.18}s">${w}</span>`).join('')}</div></div>
+        <div class="vv-card"><h5>Your words</h5><div class="vv-chips">${['GoHighLevel', 'GHL', 'LeadConnector', 'sub-account', 'Snapshots', 'Workflows', 'Funnels', 'Acme Co'].map((w, i) => `<span style="animation-delay:${0.5 + i * 0.18}s">${w}</span>`).join('')}</div></div>
         <div class="vv-card"><h5>Sounds-like fixes</h5>
           <div class="vv-fix"><s>lead captor</s> → <b>LeadConnector</b></div>
-          <div class="vv-fix"><s>h l p t</s> → <b>HLPT</b></div></div>
+          <div class="vv-fix"><s>g h l</s> → <b>GHL</b></div></div>
         <span class="vv-btn">Import Slack export</span> <span class="vv-btn ghost">Add a word</span>
       </div></div>` },
     { name: 'The memory', dur: 4.5, clip: 2.07, say: 'The memory learns your rules and your style.', html: `
@@ -71,7 +71,7 @@
         <div class="vv-card"><h5>Your rules and style</h5>
           <div class="vv-mem" style="animation-delay:.35s"><em class="r">Rule</em>Write sub-account with a hyphen</div>
           <div class="vv-mem" style="animation-delay:.6s"><em class="s">Style</em>Keep Slack messages short and friendly</div>
-          <div class="vv-mem" style="animation-delay:.9s"><em class="s">Style</em>Sign emails with "Thanks, Alex"</div>
+          <div class="vv-mem" style="animation-delay:.9s"><em class="s">Style</em>Sign emails with "Thanks, Sam"</div>
           <div class="vv-mem" style="animation-delay:1.2s"><em class="n">Noticed</em><div>You changed "Hi team" to "Hey team"</div><div class="acts"><span class="yes" data-accept>Accept</span><span>Dismiss</span></div></div>
         </div>
       </div></div>${cursor}` },
@@ -157,10 +157,10 @@
     }
     return out;
   };
-  const RAW = 'yeah so um the h l p t fix went out this morning uh guest support can tell customers';
-  const OUT = 'Yes, the [HLPT] fix went out this morning. [Guest Support] can tell customers.';
+  const RAW = 'yeah so um the g h l calendar fix went out this morning uh the support team can tell customers';
+  const OUT = 'Yes, the [GHL] calendar fix went out this morning. The support team can tell customers.';
   const OUTLEN = OUT.replace(/[\[\]]/g, '').length;
-  const EXAMPLES = ['um so the deploy is uh done i think we can tell guest support', 'The deploy is done. I think we can tell Guest Support.', 'The deploy is done, so we can let Guest Support know.'];
+  const EXAMPLES = ['um so the deploy is uh done i think we can tell the support team', 'The deploy is done. I think we can tell the support team.', 'The deploy is done, so we can let the support team know.'];
 
   // Per-scene frame functions, t = seconds into the scene. Must be pure for a given t.
   const frame = [
